@@ -26,34 +26,39 @@ body {
 }
 
 
-/* --- Estilos para la Imagen de Perfil --- */
+/* --- ESTILOS PARA LA IMAGEN DE PERFIL --- */
 .about-flex {
     display: flex;
-    flex-direction: column; /* Por defecto, apilado en móvil */
-    gap: 30px;
-    align-items: center;
+    flex-direction: column; /* Apilado por defecto en móvil */
+    gap: 30px; /* Espacio entre la imagen y el texto */
+    align-items: center; /* Centrar elementos horizontalmente en móvil */
+    justify-content: center; /* Centrar elementos verticalmente si hay espacio */
+    text-align: center; /* Centrar texto en móvil */
 }
 
 .profile-img {
     width: 200px;
     height: 200px;
-    border-radius: 50%; /* Para hacerlo redondo */
-    object-fit: cover;
-    border: 1px solid var(--primary-color);
+    border-radius: 50%; /* Redonda */
+    object-fit: cover; /* Asegura que la imagen no se distorsione */
+    border: 5px solid var(--primary-color);
     box-shadow: var(--shadow-dark);
+    /* Margen inferior para separarse del texto en móvil */
+    margin-bottom: 20px; 
 }
 
 @media (min-width: 768px) {
     .about-flex {
-        flex-direction: row; /* En escritorio, uno al lado del otro */
-        text-align: left;
+        flex-direction: row; /* Uno al lado del otro en escritorio */
+        align-items: flex-start; /* Alinear arriba */
+        text-align: left; /* Alinear texto a la izquierda */
     }
     .profile-img {
-        /* Mueve la imagen a la izquierda */
-        order: -1; 
+        order: -1; /* Poner la imagen a la izquierda del texto */
+        margin-right: 30px; /* Espacio a la derecha de la imagen */
+        margin-bottom: 0; /* Eliminar margen inferior en escritorio */
     }
 }
-
 /* CORRECCIÓN DE NEGRITA: Asegurar que el peso de la fuente sea fuerte */
 strong, b {
     font-weight: 700; 
