@@ -8,7 +8,7 @@
     --text-dark: #333333; /* Texto oscuro para fondos claros */
     --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
     --shadow-dark: 0 4px 12px rgba(0, 0, 0, 0.4);
-    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family: 'Roboto', sans-serif;
 }
 
 * {
@@ -23,6 +23,35 @@ body {
     color: var(--text-dark);
     background-color: var(--background-light);
     scroll-behavior: smooth;
+}
+
+
+/* --- Estilos para la Imagen de Perfil --- */
+.about-flex {
+    display: flex;
+    flex-direction: column; /* Por defecto, apilado en móvil */
+    gap: 30px;
+    align-items: center;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Para hacerlo redondo */
+    object-fit: cover;
+    border: 1px solid var(--primary-color);
+    box-shadow: var(--shadow-dark);
+}
+
+@media (min-width: 768px) {
+    .about-flex {
+        flex-direction: row; /* En escritorio, uno al lado del otro */
+        text-align: left;
+    }
+    .profile-img {
+        /* Mueve la imagen a la izquierda */
+        order: -1; 
+    }
 }
 
 /* CORRECCIÓN DE NEGRITA: Asegurar que el peso de la fuente sea fuerte */
