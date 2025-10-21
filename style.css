@@ -41,7 +41,7 @@ body {
     height: 200px;
     border-radius: 50%; /* Redonda */
     object-fit: cover; /* Asegura que la imagen no se distorsione */
-    border: 5px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
     box-shadow: var(--shadow-dark);
     /* Margen inferior para separarse del texto en móvil */
     margin-bottom: 20px; 
@@ -187,13 +187,32 @@ header.hero {
     justify-content: center;
 }
 
+/* --- ESTILOS PARA LAS IMÁGENES DE PROYECTOS --- */
+.project-img {
+    width: 100%; /* Ocupa todo el ancho de la tarjeta */
+    height: 200px; /* Altura fija para consistencia */
+    object-fit: cover; /* Recorta la imagen para cubrir el área */
+    border-radius: 8px 8px 0 0; /* Bordes redondeados solo en la parte superior */
+    margin-bottom: 15px; /* Espacio debajo de la imagen */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Asegurarse de que el contenedor de la imagen esté bien definido */
 .proyecto-card {
     background-color: var(--background-light);
-    padding: 30px;
+    padding: 0; /* Ajustar padding para que la imagen ocupe todo el ancho */
     border-radius: 10px;
     box-shadow: var(--shadow-light);
     max-width: 400px;
+    width: 100%; /* Asegura que ocupe el espacio disponible en flex/grid */
     transition: box-shadow 0.3s;
+    overflow: hidden; /* Importante para que la imagen no sobresalga de los bordes redondeados */
+    display: flex; /* Para que el contenido interno se organice */
+    flex-direction: column; /* Apila los elementos dentro de la tarjeta */
+}
+
+.proyecto-card .content-wrapper { /* Agregamos un div para el texto dentro de la tarjeta */
+    padding: 20px 30px 30px; /* Padding para el texto */
 }
 
 .proyecto-card:hover {
