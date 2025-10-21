@@ -2,7 +2,7 @@
 :root {
     --primary-color: #007bff; /* Azul profesional */
     --accent-color: #ffc107; /* Amarillo para acentos */
-    --background-dark: #1f1f1f; /* Fondo oscuro moderno */
+    --background-dark: #1f1f1f; /* Fondo oscuro moderno (NEGRO) */
     --background-light: #ffffff; /* Fondo claro */
     --text-light: #e0e0e0; /* Texto claro para fondos oscuros */
     --text-dark: #333333; /* Texto oscuro para fondos claros */
@@ -25,6 +25,11 @@ body {
     scroll-behavior: smooth;
 }
 
+/* CORRECCIÓN DE NEGRITA: Asegurar que el peso de la fuente sea fuerte */
+strong, b {
+    font-weight: 700; 
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -43,8 +48,9 @@ h2 {
 }
 
 /* --- 2. Header / Hero Section --- */
-.hero {
-    background: var(--background-dark);
+/* CORRECCIÓN DE FONDO: Aumentamos la especificidad para asegurar el color NEGRO en GitHub Pages */
+header.hero {
+    background-color: var(--background-dark); 
     color: var(--text-light);
     padding: 60px 0;
     text-align: center;
@@ -196,7 +202,7 @@ h2 {
     position: relative;
     max-width: 900px;
     margin: 0 auto;
-    padding-left: 20px; /* Espacio para la línea */
+    padding-left: 20px;
 }
 
 .timeline::after {
@@ -206,7 +212,7 @@ h2 {
     background-color: var(--primary-color);
     top: 0;
     bottom: 0;
-    left: 10px; /* Posición de la línea */
+    left: 10px;
 }
 
 .timeline-item {
@@ -234,7 +240,7 @@ h2 {
 
 .timeline-item .institution {
     font-style: italic;
-    color: var(--text-light); /* En sección oscura */
+    color: var(--text-light);
 }
 
 .timeline-item .date {
