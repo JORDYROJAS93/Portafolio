@@ -3,88 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jordy Rojas Torres | Portafolio</title>
+    <title>Jordy Rojas Torres | Portafolio Dev</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <h1>Jordy Rojas Torres</h1>
-            <p>Desarrollador Backend | Java | Spring Boot | Angular | UNFV</p>
-            <nav>
-                <a href="#inicio">Inicio</a>
-                <a href="#sobre-mi">Sobre mí</a>
-                <a href="#skills">Habilidades</a>
-                <a href="#proyectos">Proyectos</a>
-                <a href="#educacion">Educación</a>
-                <a href="#contacto">Contacto</a>
+    <header class="hero">
+        <div class="container hero-content">
+            <h1 class="name">Jordy Rojas Torres</h1>
+            <p class="tagline">Desarrollador Backend | Java | Spring Boot | Angular | UNFV</p>
+            <nav class="main-nav">
+                <a href="#sobre-mi"><i class="fas fa-user"></i> Sobre mí</a>
+                <a href="#skills"><i class="fas fa-code"></i> Habilidades</a>
+                <a href="#proyectos"><i class="fas fa-folder-open"></i> Proyectos</a>
+                <a href="#educacion"><i class="fas fa-graduation-cap"></i> Educación</a>
+                <a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a>
             </nav>
         </div>
     </header>
 
-    <section id="inicio">
+    <section id="sobre-mi" class="section-padding">
         <div class="container">
-            <h2>Bienvenido</h2>
-            <p>Soy desarrollador backend, estudiante de Ingeniería de Sistemas en la UNFV y me apasiona crear soluciones tecnológicas.</p>
-        </div>
-    </section>
-
-    <section id="sobre-mi">
-        <div class="container">
-            <h2>Sobre mí</h2>
-            <p>Apasionado por la tecnología y el desarrollo de software. Tengo experiencia en desarrollo backend usando Java, Spring Boot, y también manejo frameworks frontend como Angular.</p>
-        </div>
-    </section>
-
-    <section id="skills">
-        <div class="container">
-            <h2>Habilidades</h2>
-            <ul>
-                <li>Java | Spring Boot</li>
-                <li>Angular</li>
-                <li>MySQL | MongoDB</li>
-                <li>Git | GitHub</li>
-                <li>Desarrollo de APIs REST</li>
-                <li>HTML | CSS | JavaScript</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="proyectos">
-        <div class="container">
-            <h2>Proyectos</h2>
-            <div class="proyecto">
-                <h3>BoosterSnack</h3>
-                <p>Sistema de gestión para un bazar. Desarrollado en Java + Spring Boot.</p>
-                <a href="https://github.com/JORDYROJAS93/BoosterSnack" target="_blank">Ver en GitHub</a>
+            <h2><i class="fas fa-address-card"></i> Sobre mí</h2>
+            <div class="about-flex">
+                <div class="about-text">
+                    <p>Apasionado por la tecnología y el desarrollo de software. Actualmente, combino mis estudios de Ingeniería de Sistemas en la UNFV con mi experiencia práctica como **Desarrollador Backend**.</p>
+                    <p>Tengo sólida experiencia en la **creación de APIs REST** robustas usando **Java** y el *framework* **Spring Boot**. Además, tengo conocimientos en el desarrollo *frontend* con **Angular**, lo que me permite trabajar en soluciones de *full-stack* y entender el ciclo completo del desarrollo de software.</p>
+                </div>
             </div>
-            <!-- Puedes agregar más proyectos aquí -->
         </div>
     </section>
 
-    <section id="educacion">
+    <section id="skills" class="section-padding dark-section">
         <div class="container">
-            <h2>Educación</h2>
-            <ul>
-                <li>Ingeniería de Sistemas - Universidad Nacional Federico Villarreal (UNFV)</li>
-                <li>Técnico en Computación e Informática - Instituto Cibertec</li>
-            </ul>
+            <h2><i class="fas fa-wrench"></i> Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-item"><i class="fab fa-java"></i> Java | Spring Boot</div>
+                <div class="skill-item"><i class="fab fa-angular"></i> Angular (Frontend)</div>
+                <div class="skill-item"><i class="fas fa-database"></i> MySQL | MongoDB</div>
+                <div class="skill-item"><i class="fab fa-git-alt"></i> Git | GitHub</div>
+                <div class="skill-item"><i class="fas fa-server"></i> Desarrollo de APIs REST</div>
+                <div class="skill-item"><i class="fab fa-html5"></i> HTML5 | CSS3 | JavaScript</div>
+            </div>
         </div>
     </section>
 
-    <section id="contacto">
+    <section id="proyectos" class="section-padding">
         <div class="container">
-            <h2>Contacto</h2>
-            <p>Correo: <a href="mailto:jordy_r12@hotmail.com">jordy_r12@hotmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/jordy-rojas-torres-361a0b119" target="_blank">Mi perfil en LinkedIn</a></p>
-            <p>GitHub: <a href="https://github.com/JORDYROJAS93" target="_blank">Mi perfil en GitHub</a></p>
+            <h2><i class="fas fa-project-diagram"></i> Proyectos Destacados</h2>
+            <div class="proyectos-grid">
+                <div class="proyecto-card">
+                    <h3>BoosterSnack</h3>
+                    <p>Sistema de gestión y administración de inventario para un bazar o punto de venta.</p>
+                    <p class="tech-stack">**Tecnologías:** Java, Spring Boot, MySQL.</p>
+                    <a href="https://github.com/JORDYROJAS93/BoosterSnack" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github"></i> Ver Código
+                    </a>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="educacion" class="section-padding dark-section">
+        <div class="container">
+            <h2><i class="fas fa-book"></i> Educación</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Ingeniería de Sistemas</h3>
+                    <p class="institution"><i class="fas fa-university"></i> Universidad Nacional Federico Villarreal (UNFV)</p>
+                    <span class="date">En curso</span>
+                </div>
+                <div class="timeline-item">
+                    <h3>Técnico en Computación e Informática</h3>
+                    <p class="institution"><i class="fas fa-school"></i> Instituto Cibertec</p>
+                    <span class="date">Finalizado</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="section-padding">
+        <div class="container contact-info">
+            <h2><i class="fas fa-paper-plane"></i> Contacto</h2>
+            <p>¡Me encantaría colaborar! Contáctame para discutir oportunidades o proyectos.</p>
+            <div class="contact-links">
+                <a href="mailto:jordy_r12@hotmail.com" class="contact-link email"><i class="fas fa-envelope"></i> Correo</a>
+                <a href="https://www.linkedin.com/in/jordy-rojas-torres-361a0b119" target="_blank" class="contact-link linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/JORDYROJAS93" target="_blank" class="contact-link github"><i class="fab fa-github"></i> GitHub</a>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Jordy Rojas Torres. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Jordy Rojas Torres. Desarrollado con ❤️ y código.</p>
         </div>
     </footer>
 
